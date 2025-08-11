@@ -1,0 +1,38 @@
+# Build outputs
+bin/
+obj/
+[Dd]ebug*/ 
+[Rr]elease*/
+
+# Visual Studio & user settings
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+# Caches, logs, symbols
+*.pdb
+*.sdf
+*.cache
+*.log
+*.binlog
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# IDE-specific
+.vscode/
+.idea/
+.tye/
+
+# Backup/temp
+*~
+*.bak
+*.tmp
+
+# VS history & migration tools
+.vshistory/
+MigrationBackup/

@@ -3,7 +3,7 @@
 ## What is it?
 An **Inner Class** (also known as a **nested class**) is a class that is declared inside another class. This means that an **inner** class exists **within the scope** of an outer class. It can be useful when a class is only relevant within the context of another class.
 
-[Click to see code example](../../CodeExamples/InnerClass.cs){:target="_blank"}
+[Click to see code example](../../CodeExamples/InnerClass.cs)
 
 ## Why Use Inner Classes?
 

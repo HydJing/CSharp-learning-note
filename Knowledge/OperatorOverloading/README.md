@@ -7,7 +7,7 @@ With operator overloading, you can **extend the functionality of standard operat
 
 Similarly, operator overloading allows us to **customize existing operators to work with our own data types**, making them more useful in our specific scenarios.
 
-[Click to see code example](../../CodeExamples/OperatorOverloading.cs){:target="_blank"}
+[Click to see code example](../../CodeExamples/OperatorOverloading.cs)
 
 ## Best Practices:
 

@@ -12,7 +12,7 @@
   - [Code Example](#non-generic-code-example)
   - [Notes](#non-generic-notes)
 - [Generic Collections](#generic-collections)
-  - [List](#list)
+  - [List](#listt)
   - [Dictionary](#dictionary)
   - [SortedDictionary](#sorteddictionary)
   - [SortedList](#sortedlist-generic)
@@ -65,7 +65,7 @@ Non-generic collections, located in the `System.Collections` namespace, store el
 
 ## ArrayList
 - **Description**: A dynamic array that can grow or shrink, storing elements of any type.
-- **Use Case**: Flexible list for legacy code or when type safety isn’t required.
+- **Use Case**: Flexible list for legacy code or when type safety isn隆炉t required.
 - **Common Usage**: Storing mixed-type data, such as user inputs or temporary collections.
 - **Basic Operations**:
   - **Add**: `Add(object item)`, `AddRange(ICollection items)` to append items.
@@ -148,7 +148,7 @@ Non-generic collections, located in the `System.Collections` namespace, store el
 
 Generic collections in the `System.Collections.Generic` namespace provide type-safe, efficient data structures for modern C# applications. They offer compile-time type checking and eliminate boxing/unboxing overhead, making them the preferred choice over non-generic collections. Below is a summary of each collection, its common use cases, basic operations (including add, remove, access, update, query, and clear), and an advanced code example demonstrating these operations in a task management system.
 
-## List<T>
+## `List<T>`
 - **Description**: A dynamic, resizable array of elements of type `T`.
 - **Use Case**: Storing ordered sequences, such as lists of records, with frequent access or modifications.
 - **Common Usage**: Managing collections like user lists, product inventories, or task logs.
@@ -160,7 +160,7 @@ Generic collections in the `System.Collections.Generic` namespace provide type-s
   - **Query**: `Contains(T item)`, `Count`, `Exists(Predicate<T> match)` to check content.
   - **Clear**: `Clear()` to remove all items.
 
-## Dictionary<TKey, TValue>
+## `Dictionary<TKey, TValue>`
 - **Description**: A collection of key-value pairs with unique keys, optimized for fast lookup using hashing.
 - **Use Case**: Quick key-based access, such as mapping IDs to objects or caching.
 - **Common Usage**: Lookup tables, configuration settings, or indexing objects.
@@ -172,7 +172,7 @@ Generic collections in the `System.Collections.Generic` namespace provide type-s
   - **Query**: `ContainsKey(TKey key)`, `ContainsValue(TValue value)`, `Count` to check content.
   - **Clear**: `Clear()` to remove all pairs.
 
-## SortedDictionary<TKey, TValue>
+## `SortedDictionary<TKey, TValue>`
 - **Description**: A dictionary maintaining keys in sorted order using a binary search tree.
 - **Use Case**: Key-value storage requiring sorted iteration.
 - **Common Usage**: Ordered lookups, such as sorted settings or records.
@@ -184,7 +184,7 @@ Generic collections in the `System.Collections.Generic` namespace provide type-s
   - **Query**: `ContainsKey(TKey key)`, `Count`, `Keys`, `Values` to check content.
   - **Clear**: `Clear()` to remove all pairs.
 
-## SortedList<TKey, TValue>
+## `SortedList<TKey, TValue>`
 - **Description**: A sorted key-value collection stored in contiguous memory, memory-efficient compared to `SortedDictionary`.
 - **Use Case**: Sorted key-value pairs for smaller datasets or memory-constrained scenarios.
 - **Common Usage**: Sorted data with frequent access.
@@ -196,7 +196,7 @@ Generic collections in the `System.Collections.Generic` namespace provide type-s
   - **Query**: `ContainsKey(TKey key)`, `ContainsValue(TValue value)`, `Count` to check content.
   - **Clear**: `Clear()` to remove all pairs.
 
-## HashSet<T>
+## `HashSet<T>`
 - **Description**: A collection of unique elements with fast lookup and set operations.
 - **Use Case**: Storing unique items or performing set operations like union or intersection.
 - **Common Usage**: Deduplication, tracking unique IDs, or membership testing.
@@ -208,7 +208,7 @@ Generic collections in the `System.Collections.Generic` namespace provide type-s
   - **Query**: `Contains(T item)`, `Count`, `IsSubsetOf(IEnumerable<T> other)` for set operations.
   - **Clear**: `Clear()` to remove all items.
 
-## SortedSet<T>
+## `SortedSet<T>`
 - **Description**: A set of unique elements maintained in sorted order.
 - **Use Case**: Ordered collections of unique items, such as prioritized lists.
 - **Common Usage**: Managing sorted unique values like rankings or priorities.
@@ -220,11 +220,9 @@ Generic collections in the `System.Collections.Generic` namespace provide type-s
   - **Query**: `Contains(T item)`, `Count`, `GetViewBetween(T lower, T upper)` for range queries.
   - **Clear**: `Clear()` to remove all items.
 
-## Queue<T>
+## `Queue<T>`
 - **Description**: A first-in, first-out (FIFO) collection.
-- **Use Case**: Processing items in the order追究
-
-System: order they were added, like task scheduling.
+- **Use Case**: Processing items in the order they were added, like task scheduling.
 - **Common Usage**: Job queues, event handling, or sequential processing.
 - **Basic Operations**:
   - **Add**: `Enqueue(T item)` to add an item to the end.
@@ -233,7 +231,7 @@ System: order they were added, like task scheduling.
   - **Query**: `Count` to get number of items.
   - **Clear**: `Clear()` to remove all items.
 
-## Stack<T>
+## `Stack<T>`
 - **Description**: A last-in, first-out (LIFO) collection.
 - **Use Case**: Managing items where the most recent addition is processed first, like undo operations.
 - **Common Usage**: Backtracking algorithms, call stacks, or history tracking.
@@ -244,7 +242,7 @@ System: order they were added, like task scheduling.
   - **Query**: `Count` to get number of items.
   - **Clear**: `Clear()` to remove all items.
 
-## LinkedList<T>
+## `LinkedList<T>`
 - **Description**: A doubly-linked list where each element points to the next and previous elements.
 - **Use Case**: Frequent insertions or deletions in the middle of a sequence.
 - **Common Usage**: Playlists, navigation histories, or dynamic sequences.
@@ -271,7 +269,7 @@ System: order they were added, like task scheduling.
 
 Concurrent collections in the `System.Collections.Concurrent` namespace are designed for thread-safe operations in multi-threaded applications, minimizing the need for explicit locking. Below is a summary of each collection, its common use cases, basic operations (including add, remove, and other fundamental operations like access, update, or query), and an advanced code example demonstrating these operations in a simulated task processing system.
 
-## ConcurrentDictionary<TKey, TValue>
+## `ConcurrentDictionary<TKey, TValue>`
 - **Description**: A thread-safe dictionary of key-value pairs with unique keys, optimized for concurrent access and updates.
 - **Use Case**: Storing key-value data in multi-threaded environments, such as caching or shared state.
 - **Common Usage**: Managing shared configurations, counters, or session data across threads.
@@ -283,7 +281,7 @@ Concurrent collections in the `System.Collections.Concurrent` namespace are desi
   - **Query**: `ContainsKey(TKey key)` (checks if key exists); `Count` (gets number of pairs).
   - **Clear**: `Clear()` (removes all pairs).
 
-## ConcurrentQueue<T>
+## `ConcurrentQueue<T>`
 - **Description**: A thread-safe first-in, first-out (FIFO) queue.
 - **Use Case**: Processing items in the order they were added across multiple threads.
 - **Common Usage**: Task queues, event processing, or producer-consumer scenarios.
@@ -294,7 +292,7 @@ Concurrent collections in the `System.Collections.Concurrent` namespace are desi
   - **Query**: `Count` (gets number of items); `IsEmpty` (checks if queue is empty).
   - **Clear**: `Clear()` (removes all items).
 
-## ConcurrentStack<T>
+## `ConcurrentStack<T>`
 - **Description**: A thread-safe last-in, first-out (LIFO) stack.
 - **Use Case**: Managing items where the most recent addition is processed first in a thread-safe manner.
 - **Common Usage**: Undo operations or history tracking in concurrent applications.
@@ -305,7 +303,7 @@ Concurrent collections in the `System.Collections.Concurrent` namespace are desi
   - **Query**: `Count` (gets number of items); `IsEmpty` (checks if stack is empty).
   - **Clear**: `Clear()` (removes all items).
 
-## ConcurrentBag<T>
+## `ConcurrentBag<T>`
 - **Description**: A thread-safe, unordered collection optimized for scenarios where threads primarily add and remove their own items.
 - **Use Case**: Storing items without order requirements in multi-threaded environments.
 - **Common Usage**: Collecting results from parallel tasks or temporary storage.
@@ -316,7 +314,7 @@ Concurrent collections in the `System.Collections.Concurrent` namespace are desi
   - **Query**: `Count` (gets number of items); `IsEmpty` (checks if bag is empty).
   - **Clear**: Not directly supported; must iterate and use `TryTake` to empty.
 
-## BlockingCollection<T>
+## `BlockingCollection<T>`
 - **Description**: A thread-safe collection supporting bounding and blocking, often wrapping another collection (e.g., `ConcurrentQueue<T>`).
 - **Use Case**: Producer-consumer scenarios where threads wait for items or respect capacity limits.
 - **Common Usage**: Task pipelines, buffered data processing, or throttled queues.
@@ -409,7 +407,7 @@ Specialized collections, located in the `System.Collections.Specialized` namespa
   - **Add**: `Add(object key, object value)` to insert a key-value pair.
   - **Remove**: `Remove(object key)`, `RemoveAt(int index)` to delete a key-value pair.
   - **Access**: `GetEnumerator()` or indexer (`this[object key]` or `this[int index]`) to get values.
-  - **Update**: Modify via indexer (`dict[key] = value`放下
+  - **Update**: Modify via indexer (`dict[key] = value`路脜脧脗
 
 System: value` or `dict[index] = value`).
   - **Query**: `Contains(object key)`, `Count`, `Keys`, `Values` to check content.
@@ -441,7 +439,7 @@ System: value` or `dict[index] = value`).
 
 Immutable collections, available in the `System.Collections.Immutable` namespace (via the `System.Collections.Immutable` NuGet package), are thread-safe and cannot be modified after creation, ensuring data integrity in concurrent or functional programming scenarios. These collections are designed for scenarios where immutability is preferred, creating new instances for modifications rather than altering the original. Below is a summary of each collection, its common use cases, basic operations (including add, remove, access, update, query, and clear), and an advanced code example demonstrating these operations in a task management system.
 
-## ImmutableList<T>
+## `ImmutableList<T>`
 - **Description**: An immutable, ordered list of elements.
 - **Use Case**: Storing immutable sequences of items, such as task lists or logs, in thread-safe or functional programming contexts.
 - **Common Usage**: Maintaining unchangeable collections for data integrity or snapshotting state.
@@ -453,7 +451,7 @@ Immutable collections, available in the `System.Collections.Immutable` namespace
   - **Query**: `Contains(T item)`, `Count`, `IndexOf(T item)` to check content.
   - **Clear**: `Clear()` to create an empty list.
 
-## ImmutableDictionary<TKey, TValue>
+## `ImmutableDictionary<TKey, TValue>`
 - **Description**: An immutable collection of key-value pairs with unique keys.
 - **Use Case**: Thread-safe key-value storage for immutable lookups, such as configuration or state snapshots.
 - **Common Usage**: Caching or mapping IDs to objects in immutable contexts.
@@ -465,7 +463,7 @@ Immutable collections, available in the `System.Collections.Immutable` namespace
   - **Query**: `ContainsKey(TKey key)`, `Count`, `Keys`, `Values` to check content.
   - **Clear**: `Clear()` to create an empty dictionary.
 
-## ImmutableSortedDictionary<TKey, TValue>
+## `ImmutableSortedDictionary<TKey, TValue>`
 - **Description**: An immutable dictionary with keys maintained in sorted order.
 - **Use Case**: Immutable key-value storage requiring sorted iteration.
 - **Common Usage**: Sorted configuration settings or ordered data snapshots.
@@ -477,7 +475,7 @@ Immutable collections, available in the `System.Collections.Immutable` namespace
   - **Query**: `ContainsKey(TKey key)`, `Count`, `Keys`, `Values` to check content.
   - **Clear**: `Clear()` to create an empty dictionary.
 
-## ImmutableHashSet<T>
+## `ImmutableHashSet<T>`
 - **Description**: An immutable collection of unique elements with fast lookup.
 - **Use Case**: Storing unique items immutably, such as deduplicated lists or tags.
 - **Common Usage**: Maintaining immutable sets for thread-safe operations or functional programming.
@@ -489,7 +487,7 @@ Immutable collections, available in the `System.Collections.Immutable` namespace
   - **Query**: `Contains(T item)`, `Count`, `IsSubsetOf(IEnumerable<T> other)` for set operations.
   - **Clear**: `Clear()` to create an empty set.
 
-## ImmutableSortedSet<T>
+## `ImmutableSortedSet<T>`
 - **Description**: An immutable set of unique elements maintained in sorted order.
 - **Use Case**: Ordered, unique collections, such as prioritized or ranked items.
 - **Common Usage**: Managing sorted unique values like priorities or rankings immutably.
@@ -501,7 +499,7 @@ Immutable collections, available in the `System.Collections.Immutable` namespace
   - **Query**: `Contains(T item)`, `Count`, `GetViewBetween(T lower, T upper)` for range queries.
   - **Clear**: `Clear()` to create an empty set.
 
-## ImmutableQueue<T>
+## `ImmutableQueue<T>`
 - **Description**: An immutable first-in, first-out (FIFO) queue.
 - **Use Case**: Processing items in order of addition in an immutable, thread-safe manner.
 - **Common Usage**: Immutable task queues or event logs.
@@ -512,7 +510,7 @@ Immutable collections, available in the `System.Collections.Immutable` namespace
   - **Query**: `Count`, `IsEmpty` to check content.
   - **Clear**: `Clear()` to create an empty queue.
 
-## ImmutableStack<T>
+## `ImmutableStack<T>`
 - **Description**: An immutable last-in, first-out (LIFO) stack.
 - **Use Case**: Managing items where the most recent addition is processed first, immutably.
 - **Common Usage**: Undo operations or history tracking in immutable contexts.
@@ -523,7 +521,7 @@ Immutable collections, available in the `System.Collections.Immutable` namespace
   - **Query**: `Count`, `IsEmpty` to check content.
   - **Clear**: `Clear()` to create an empty stack.
 
-## ImmutableArray<T>
+## `ImmutableArray<T>`
 - **Description**: An immutable, fixed-size array with efficient memory usage.
 - **Use Case**: Storing a fixed collection of items immutably, with array-like access.
 - **Common Usage**: Snapshots of data or immutable buffers.
@@ -550,7 +548,7 @@ Immutable collections, available in the `System.Collections.Immutable` namespace
 
 The following collections, while not part of the `System.Collections` or `System.Collections.Generic` namespaces, are significant in C# for specific use cases. These include the basic `Array`, the `KeyedCollection<TKey, TItem>` from `System.Collections.ObjectModel`, and the `ObservableCollection<T>` from the same namespace. Below is a summary of each collection, its common use cases, basic operations (including add, remove, access, update, query, and clear), and an advanced code example demonstrating these operations in a task management system.
 
-## Array (T[])
+## `Array (T[])`
 - **Description**: A fixed-size, type-safe array of elements, part of the core C# language.
 - **Use Case**: Storing a fixed number of items with fast, index-based access.
 - **Common Usage**: Static data storage, such as configuration arrays or fixed-size buffers.
@@ -562,7 +560,7 @@ The following collections, while not part of the `System.Collections` or `System
   - **Query**: `Length`, `Contains` (via LINQ), or iterate to check content.
   - **Clear**: `Array.Clear(array, int index, int length)` to set elements to default values.
 
-## KeyedCollection<TKey, TItem>
+## `KeyedCollection<TKey, TItem>`
 - **Description**: An abstract base class in `System.Collections.ObjectModel` for collections where items are indexed by a key embedded in the item, requiring implementation of `GetKeyForItem`.
 - **Use Case**: Storing items with embedded keys for lookup, bridging lists and dictionaries.
 - **Common Usage**: Managing collections where items have a unique identifier, such as database records.
@@ -574,7 +572,7 @@ The following collections, while not part of the `System.Collections` or `System
   - **Query**: `Contains(TKey key)`, `Count`, `Contains(TItem item)` to check content.
   - **Clear**: `Clear()` to remove all items.
 
-## ObservableCollection<T>
+## `ObservableCollection<T>`
 - **Description**: A generic collection in `System.Collections.ObjectModel` that provides notifications when items are added, removed, or modified, commonly used in data-binding scenarios (e.g., WPF, MAUI).
 - **Use Case**: Dynamic collections with automatic UI updates in data-binding frameworks.
 - **Common Usage**: Binding to UI elements like lists or grids in desktop or mobile applications.

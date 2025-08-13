@@ -9,28 +9,28 @@
   - [Stack](#stack)
   - [SortedList](#sortedlist)
   - [BitArray](#bitarray)
-  - [Code Example](#non-generic-code-example)
-  - [Notes](#non-generic-notes)
+  - [Code Example](../../CodeExamples/CollectionsNonGeneric.cs)
+  - [Notes](#non-generic-collections-notes)
 - [Generic Collections](#generic-collections)
   - [List](#listt)
-  - [Dictionary](#dictionary)
-  - [SortedDictionary](#sorteddictionary)
-  - [SortedList](#sortedlist-generic)
-  - [HashSet](#hashset)
-  - [SortedSet](#sortedset)
-  - [Queue](#queue-generic)
-  - [Stack](#stack-generic)
-  - [LinkedList](#linkedlist)
-  - [Code Example](#generic-code-example)
-  - [Notes](#generic-notes)
+  - [Dictionary](#dictionarytkey-tvalue)
+  - [SortedDictionary](#sorteddictionarytkey-tvalue)
+  - [SortedList](#sortedlisttkey-tvalue)
+  - [HashSet](#hashsett)
+  - [SortedSet](#sortedsett)
+  - [Queue](#queuet)
+  - [Stack](#stackt)
+  - [LinkedList](#linkedlistt)
+  - [Code Example](../../CodeExamples/CollectionsGeneric.cs)
+  - [Notes](#generic-collections-notes)
 - [Concurrent Collections](#concurrent-collections)
-  - [ConcurrentDictionary](#concurrentdictionary)
-  - [ConcurrentQueue](#concurrentqueue)
-  - [ConcurrentStack](#concurrentstack)
-  - [ConcurrentBag](#concurrentbag)
-  - [BlockingCollection](#blockingcollection)
-  - [Code Example](#concurrent-code-example)
-  - [Notes](#concurrent-notes)
+  - [ConcurrentDictionary](#concurrentdictionarytkey-tvalue)
+  - [ConcurrentQueue](#concurrentqueuet)
+  - [ConcurrentStack](#concurrentstackt)
+  - [ConcurrentBag](#concurrentbagt)
+  - [BlockingCollection](#blockingcollectiont)
+  - [Code Example](../../CodeExamples/CollectionsGeneric.cs)
+  - [Notes](#concurrent-collections-notes)
 - [Specialized Collections](#specialized-collections)
   - [NameValueCollection](#namevaluecollection)
   - [StringCollection](#stringcollection)
@@ -39,25 +39,25 @@
   - [ListDictionary](#listdictionary)
   - [OrderedDictionary](#ordereddictionary)
   - [BitVector32](#bitvector32)
-  - [Code Example](#specialized-code-example)
-  - [Notes](#specialized-notes)
+  - [Code Example](../../CodeExamples/CollectionsSpecial.cs)
+  - [Notes](#specializeds-notes)
 - [Immutable Collections](#immutable-collections)
-  - [ImmutableList](#immutablelist)
-  - [ImmutableDictionary](#immutabledictionary)
-  - [ImmutableSortedDictionary](#immutablesorteddictionary)
-  - [ImmutableHashSet](#immutablehashset)
-  - [ImmutableSortedSet](#immutablesortedset)
-  - [ImmutableQueue](#immutablequeue)
-  - [ImmutableStack](#immutablestack)
-  - [ImmutableArray](#immutablearray)
-  - [Code Example](#immutable-code-example)
-  - [Notes](#immutable-notes)
+  - [ImmutableList](#immutablelistt)
+  - [ImmutableDictionary](#immutabledictionarytkey-tvalue)
+  - [ImmutableSortedDictionary](#immutablesorteddictionarytkey-tvalue)
+  - [ImmutableHashSet](#immutablehashsett)
+  - [ImmutableSortedSet](#immutablesortedsett)
+  - [ImmutableQueue](#immutablequeuet)
+  - [ImmutableStack](#immutablestackt)
+  - [ImmutableArray](#immutablearrayt)
+  - [Code Example](../../CodeExamples/CollectionsImmutable.cs)
+  - [Notes](#immutable-collections-notes)
 - [Other Notable Collections](#other-notable-collections)
-  - [Array](#array)
-  - [KeyedCollection](#keyedcollection)
+  - [Array](#array-t)
+  - [KeyedCollection](#keyedcollectiontkey-titem)
   - [ObservableCollection](#observablecollection)
-  - [Code Example](#other-code-example)
-  - [Notes](#other-notes)
+  - [Code Example]()
+  - [Notes](#other-collections-notes)
 
 # Non-Generic Collections
 
@@ -136,7 +136,7 @@ Non-generic collections, located in the `System.Collections` namespace, store el
 
 [Click to see code example](../../CodeExamples/CollectionsNonGeneric.cs)
 
-## Non-Generic Notes
+## Non-Generic Collections Notes
 
  - Type Safety: Non-generic collections store items as `object`, requiring casting and risking runtime errors.
  - Performance: Boxing/unboxing for value types (e.g., `int`) can reduce performance.
@@ -256,7 +256,7 @@ Generic collections in the `System.Collections.Generic` namespace provide type-s
 
 [Click to see code example](../../CodeExamples/CollectionsGeneric.cs)
 
-## Note
+## Generic Collections Note
 
  - **Type Safety**: Generic collections ensure compile-time type checking, reducing runtime errors.
  - **Performance**: Optimized for specific scenarios (e.g., `Dictionary<TKey, TValue>` for fast lookups, `LinkedList<T>` for dynamic insertions).
@@ -327,7 +327,7 @@ Concurrent collections in the `System.Collections.Concurrent` namespace are desi
 
 [Click to see code example](../../CodeExamples/CollectionsGeneric.cs)
 
-## Note
+## Concurrent Collections Note
 
  - **Thread Safety**: Concurrent collections ensure safe access and modification in multi-threaded scenarios without manual locks.
  - **Performance**: Optimized for concurrency; ConcurrentBag excels when threads manage their own items, while BlockingCollection supports blocking for producer-consumer patterns.
@@ -427,7 +427,7 @@ System: value` or `dict[index] = value`).
 
 [Click to see code example](../../CodeExamples/CollectionsSpecial.cs)
 
-## Note
+## Specialized Collections Note
 
  - Type Safety: Most specialized collections are non-generic, requiring casting for non-string types, which may lead to runtime errors.
  - Performance: `ListDictionary` and `HybridDictionary` are optimized for small collections; `BitVector32` is highly efficient for bit-level operations.
@@ -535,7 +535,7 @@ Immutable collections, available in the `System.Collections.Immutable` namespace
 	 
 [Click to see code example](../../CodeExamples/CollectionsImmutable.cs)
 	
-## Notes
+## Immutable Collections Notes
 
  - Immutability: Operations return new instances, leaving the original collection unchanged, ensuring thread safety and data integrity.
  - Performance: Optimized for immutability; use builders (e.g., `ImmutableList<T>.Builder`) for bulk modifications to improve efficiency.
@@ -586,7 +586,7 @@ The following collections, while not part of the `System.Collections` or `System
 
 [Click to see code example](../../CodeExamples/CollectionsOthers.cs)
 
-## Notes
+## Other Collections Notes
 
  - Type Safety: `Array` and `ObservableCollection<T>` are type-safe; `KeyedCollection<TKey, TItem>` is generic and requires a key extraction implementation.
  - Performance: `Array` is highly efficient for fixed-size data; `KeyedCollection` balances list and dictionary access; `ObservableCollection` incurs overhead due to change notifications.

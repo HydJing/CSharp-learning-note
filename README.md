@@ -10,6 +10,12 @@ Learning note for CSharp
 
 ---
 
+## Collections
+
+[Find out more](Knowledge/Collections/README.md)
+
+---
+
 ## Parameter Modifiers
 
 [Find out more](Knowledge/ParameterModifiers/README.md)

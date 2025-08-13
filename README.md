@@ -43,3 +43,11 @@ Learning note for CSharp
 ## Operator is and as
 
 [Find out more](Knowledge/OperatorIsAndAs/README.md)
+
+---
+
+## Predicate and Delegate
+
+[Find out more](Knowledge/PredicateAndDelegate/README.md)
+
+---

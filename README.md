@@ -57,3 +57,27 @@ Learning note for CSharp
 [Find out more](Knowledge/PredicateAndDelegate/README.md)
 
 ---
+
+## Relationship has and is
+
+[Find out more](Knowledge/RelationshipHasAndIs/README.md)
+
+---
+
+## Method hiding and overriding
+
+[Find out more](Knowledge/MethodHidingAndOverriding/README.md)
+
+---
+
+## Method Sealed
+
+[Find out more](Knowledge/MethodSealed/README.md)
+
+---
+
+## Abstract Class
+
+[Find out more](Knowledge/AbstractClass/README.md)
+
+---

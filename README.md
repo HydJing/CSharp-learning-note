@@ -76,8 +76,20 @@ Learning note for CSharp
 
 ---
 
-## Abstract Class
+## Abstract Class VS Interface
 
-[Find out more](Knowledge/AbstractClass/README.md)
+[Find out more](Knowledge/AbstractClassVSInterface/README.md)
+
+---
+
+## Dependecy Injection
+
+[Find out more](Knowledge/DependecyInjection/README.md)
+
+---
+
+## Constructs
+
+[Find out more](Knowledge/Constructs/README.md)
 
 ---
